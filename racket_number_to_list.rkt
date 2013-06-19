@@ -15,7 +15,7 @@
                     (f (car ys) (cdr ys) (cons (- (car ys) (* hd 10)) acc))))])
     (f (car xs) (cdr xs) (list (car xs)))))
 
-;uses (oom) and (subtract-previous) to help change a list into a sequence of digits
+;uses (oom) and (subtract-previous) to help change a number into a list of digits
 (define (number->list x)
   (letrec ([f (lambda (goal count acc accn)
                 (if (> count goal)
